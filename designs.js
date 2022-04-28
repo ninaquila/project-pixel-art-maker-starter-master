@@ -21,19 +21,19 @@ function makeGrid(height, width) {
         getCanvas.innerHTML += grid;
     }
     getCanvas.addEventListener('click', respondToTheClick);
-    console.log('Notification');
 }
 
 
 
 //Click Color Event 
-function addClickEventToCells() {
+function respondToTheClick() {
     const cells = document.getElementsByClassName('cell');
     const colorPicker = document.getElementById('colorPicker');
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", function(event) {
             let clickedCell = event.target;
             clickedCell.style.backgroundColor = colorPicker.value;
+            console.log('test');
         });
     }
 }
